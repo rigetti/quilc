@@ -289,3 +289,15 @@
                (:file "suite")
                (:file "stabilizer-group-tests")
                (:file "cleve-gottesman-tests")))
+
+(asdf:defsystem #:cl-quil/visualization
+  :description "Quil and quilc-related visualization utilities."
+  :author "Erik Davis <ejdavis@hrl.com>"
+  :license "Apache License 2.0 (See LICENSE.txt)"
+  :depends-on (#:alexandria
+               #:common-lisp-jupyter
+               #:cl-quil)
+  :pathname "src/visualization/"
+  :serial t
+  :components ((:file "package")
+               (:file "circuit-diagram")))
